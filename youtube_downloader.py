@@ -185,9 +185,7 @@ url_var.set("https://www.youtube.com/watch?v=9RTaIpVuTqE")
 url_entry = Entry(url_frame, width=50, borderwidth=2, textvariable=url_var, relief=GROOVE, bg="#525F83", fg="#929BE2")
 url_entry.grid(column=1, row=1, ipady=4)
 url_error = Label(url_frame, text="Unable to get the video! Please enter valid link.", fg="red", bg="#FFCAA1", width=43)
-fetch = Button(url_frame, text="Fetch Video", command=Fetch_video, font="timesnewroman 8 italic", relief=GROOVE,
-               bg="#0E245D", fg="white",
-               overrelief=RIDGE, height=1, width=10, activeforeground="#0E245D")
+fetch = Button(url_frame, text="Fetch Video", command=Fetch_video, font="timesnewroman 8 italic", relief=GROOVE, bg="#0E245D", fg="white", overrelief=RIDGE, height=1, width=10, activeforeground="#0E245D")
 fetch.grid(row=3, column=1, sticky=W, pady=10, ipady=3, ipadx=3)
 url_frame.pack(fill=X, anchor=N)
 
@@ -200,8 +198,7 @@ title.pack(side=LEFT, )
 
 # Resolution
 options = Frame(root, bg="#525F83")
-Label(options, text="Quality\t  Type\t        Size\t     Format", font="comicsansms 12 bold", padx=80,
-      bg="#525F83").pack(anchor=W)
+Label(options, text="Quality\t  Type\t        Size\t     Format", font="comicsansms 12 bold", padx=80, bg="#525F83").pack(anchor=W)
 p720_status, p360_status, audio_status_m4a, audio_status_opus, video_only_status = StringVar(), StringVar(), StringVar(), StringVar(), StringVar()
 p720_status.set(0), p360_status.set(0), audio_status_m4a.set(0), audio_status_opus.set(0), video_only_status.set(0)
 p720 = Checkbutton(options, variable=p720_status, bg="#525F83", activebackground='#293656')
@@ -227,12 +224,10 @@ progress_bar = ttk.Progressbar(progress_frame, mode="determinate", length=100, v
 status_frame = Frame(root, bg="#525F83", bd=2, height=10, relief=GROOVE)
 status_var = StringVar()
 status_var.set("Copy and paste the link")
-status = Label(status_frame, textvar=status_var, font="timesnewroman 8 italic", anchor=W, fg="white", bg="#525F83",
-               padx=6)
+status = Label(status_frame, textvar=status_var, font="timesnewroman 8 italic", anchor=W, fg="white", bg="#525F83", padx=6)
 
 status.pack(side=LEFT, )
-copyR = Label(status_frame, text="Created by: Arbaz Khan\n Copyright 2021", font="timesnewroman 6 italic", anchor=E,
-              bg="#525F83", )
+copyR = Label(status_frame, text="Created by: Arbaz Khan\n Copyright 2021", font="timesnewroman 6 italic", anchor=E, bg="#525F83", )
 copyR.pack(side=RIGHT, pady=10)
 status_frame.pack(side=BOTTOM, fill=X, pady=2)
 progress_frame.pack(fill=X, side=BOTTOM, padx=4)
